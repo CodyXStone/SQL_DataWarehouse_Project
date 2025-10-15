@@ -7,9 +7,9 @@ will be held in the Bronze layer
 
 
 --Creating tables for the crm source
-IF OBJECT_ID ('bronze.crm_crust_info', 'U') IS NOT NULL
-	DROP TABLE bronze.crm_crust_info;
-CREATE TABLE bronze.crm_crust_info (
+IF OBJECT_ID ('bronze.crm_cust_info', 'U') IS NOT NULL
+	DROP TABLE bronze.crm_cust_info;
+CREATE TABLE bronze.crm_cust_info (
 	cst_id INT,
 	cst_key NVARCHAR(50),
 	cst_firstname NVARCHAR(50),
