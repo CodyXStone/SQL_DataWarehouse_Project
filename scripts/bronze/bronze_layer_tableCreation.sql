@@ -1,11 +1,14 @@
 /*
-==================================
-Create the tables that the data 
-will be held in the Bronze layer
-==================================
+===============================================================================
+DDL SCRIPT: CREATE BRONZE TABLES
+===============================================================================
+Script Purpose:
+	Creates tables in the 'bronze' schema, dropping existing tables if needed
+	Run this script to re-define the DDL structure of 'bronze' Tables
+===============================================================================
 */
 
-
+------------------------------------
 --Creating tables for the crm source
 IF OBJECT_ID ('bronze.crm_cust_info', 'U') IS NOT NULL
 	DROP TABLE bronze.crm_cust_info;
@@ -42,7 +45,7 @@ CREATE TABLE bronze.crm_sales_details (
 	sls_quantity INT,
 	sls_price INT
 );
-
+-----------------------------------------
 ---Creating the tables for the erp source
 IF OBJECT_ID ('bronze.erp_cust_az12', 'U') IS NOT NULL
 	DROP TABLE bronze.erp_cust_az12;
